@@ -1,3 +1,32 @@
+# Project Setup
+
+## Prerequisites
+
+- Node.js & npm installed
+- Sass (installed via npm)
+
+## Setup Instructions
+
+1. Clone the repository:
+
+```bash
+git clone https://autocode.git.epam.com/your-username/your-repo-name.git
+cd your-repo-name
+
+
+npm install
+
+npm run compile
+
+
+
+
+
+
+
+
+
+
 # Capstone project template
 
 
