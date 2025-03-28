@@ -1,0 +1,247 @@
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: $font-body;
+	background: $color-light;
+	color: $color-dark;
+	line-height: 1.6;
+}
+
+a {
+	text-decoration: none;
+	color: inherit;
+}
+
+
+.main-header {
+	background: $color-dark;
+	padding: 1rem 2rem;
+
+	.main-nav {
+		@include flex-center;
+		justify-content: space-between;
+		max-width: 1200px;
+		margin: 0 auto;
+
+		.logo {
+			font-family: $font-title;
+			font-size: 1.5rem;
+			color: $color-primary;
+		}
+
+		.main-menu {
+			list-style: none;
+			@include flex-center;
+			gap: 2rem;
+
+			li {
+				position: relative;
+
+				&:hover ul {
+					display: block;
+				}
+
+				ul {
+					display: none;
+					position: absolute;
+					top: 100%;
+					left: 0;
+					background: $color-light;
+					border: 1px solid #ccc;
+					padding: 0.5rem;
+					list-style: none;
+
+					li {
+						padding: 0.5rem 1rem;
+					}
+
+					a {
+						color: $color-dark;
+					}
+				}
+			}
+
+			a {
+				color: $color-light;
+				font-weight: bold;
+
+				&:hover {
+					color: $color-primary;
+				}
+			}
+		}
+	}
+}
+
+
+.hero {
+	background: url('../../assets/img/hero.jpg') center/cover no-repeat;
+	height: 90vh;
+	position: relative;
+	text-align: center;
+	color: $color-light;
+	@include flex-center;
+
+	.hero-overlay {
+		position: absolute;
+		inset: 0;
+		background: rgba(0, 0, 0, 0.5);
+	}
+
+	.hero-content {
+		position: relative;
+		z-index: 1;
+		max-width: 800px;
+		padding: 0 1rem;
+
+		h1 {
+			font-family: $font-title;
+			font-size: 3rem;
+			margin-bottom: 1rem;
+		}
+
+		p {
+			font-size: 1.2rem;
+			margin-bottom: 2rem;
+		}
+
+		.hero-btn {
+			padding: 0.75rem 2rem;
+			background: $color-primary;
+			color: $color-light;
+			border-radius: 5px;
+			font-weight: bold;
+			transition: background 0.3s;
+
+			&:hover {
+				background: darken($color-primary, 10%);
+			}
+		}
+	}
+}
+
+.property-category {
+	padding: 4rem 2rem;
+	max-width: 1200px;
+	margin: 0 auto;
+  
+	h2 {
+	  font-family: $font-title;
+	  font-size: 2rem;
+	  margin-bottom: 2rem;
+	  color: $color-dark;
+	  border-bottom: 2px solid $color-primary;
+	  display: inline-block;
+	}
+  
+	.property-list {
+	  display: grid;
+	  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+	  gap: 2rem;
+	}
+  }
+  
+  .property-card {
+	background: $color-light;
+	border: 1px solid #ddd;
+	border-radius: 10px;
+	padding: 2rem;
+	text-align: center;
+	box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
+	transition: transform 0.3s ease;
+  
+	&:hover {
+	  transform: translateY(-5px);
+	}
+  
+	h3 {
+	  font-family: $font-title;
+	  font-size: 1.5rem;
+	  margin-bottom: 1rem;
+	}
+  
+	p {
+	  font-size: 1rem;
+	  color: #444;
+	  margin-bottom: 1rem;
+	}
+  
+	a {
+	  display: inline-block;
+	  margin-top: 1rem;
+	  color: $color-primary;
+	  font-weight: bold;
+  
+	  &:hover {
+		text-decoration: underline;
+	  }
+	}
+  }
+  
+  .property-label {
+	display: inline-block;
+	font-size: 0.75rem;
+	font-weight: 600;
+	text-transform: uppercase;
+	padding: 0.3rem 0.75rem;
+	border-radius: 20px;
+	margin-bottom: 1rem;
+  
+	&.for-sale {
+	  background-color: $color-primary;
+	  color: $color-light;
+	}
+  
+	&.for-rent {
+	  background-color: #3498db;
+	  color: $color-light;
+	}
+  }
+  
+
+.main-footer {
+	background: $color-dark;
+	color: $color-light;
+	padding: 2rem;
+
+	.footer-nav {
+		ul {
+			list-style: none;
+			display: flex;
+			justify-content: center;
+			gap: 2rem;
+			margin-bottom: 1rem;
+
+			a {
+				color: $color-light;
+
+				&:hover {
+					color: $color-primary;
+				}
+			}
+		}
+	}
+
+	p {
+		text-align: center;
+		font-size: 0.875rem;
+		color: #aaa;
+	}
+}
+
+
+@include respond(tablet) {
+	.hero h1 {
+		font-size: 2.2rem;
+	}
+
+	.main-menu {
+		flex-direction: column;
+		gap: 1rem;
+	}
+}

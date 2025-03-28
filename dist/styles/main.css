@@ -1,0 +1,218 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Lato", sans-serif;
+  background: #ffffff;
+  color: #0d0d0d;
+  line-height: 1.6;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.main-header {
+  background: #0d0d0d;
+  padding: 1rem 2rem;
+}
+.main-header .main-nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.main-header .main-nav .logo {
+  font-family: "Playfair Display", serif;
+  font-size: 1.5rem;
+  color: #d4af37;
+}
+.main-header .main-nav .main-menu {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+.main-header .main-nav .main-menu li {
+  position: relative;
+}
+.main-header .main-nav .main-menu li:hover ul {
+  display: block;
+}
+.main-header .main-nav .main-menu li ul {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: #ffffff;
+  border: 1px solid #ccc;
+  padding: 0.5rem;
+  list-style: none;
+}
+.main-header .main-nav .main-menu li ul li {
+  padding: 0.5rem 1rem;
+}
+.main-header .main-nav .main-menu li ul a {
+  color: #0d0d0d;
+}
+.main-header .main-nav .main-menu a {
+  color: #ffffff;
+  font-weight: bold;
+}
+.main-header .main-nav .main-menu a:hover {
+  color: #d4af37;
+}
+
+.hero {
+  background: url("../../assets/img/hero.jpg") center/cover no-repeat;
+  height: 90vh;
+  position: relative;
+  text-align: center;
+  color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.hero .hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+}
+.hero .hero-content {
+  position: relative;
+  z-index: 1;
+  max-width: 800px;
+  padding: 0 1rem;
+}
+.hero .hero-content h1 {
+  font-family: "Playfair Display", serif;
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+.hero .hero-content p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+.hero .hero-content .hero-btn {
+  padding: 0.75rem 2rem;
+  background: #d4af37;
+  color: #ffffff;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+.hero .hero-content .hero-btn:hover {
+  background: rgb(177.7777777778, 144.8888888889, 38.2222222222);
+}
+
+.property-category {
+  padding: 4rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.property-category h2 {
+  font-family: "Playfair Display", serif;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: #0d0d0d;
+  border-bottom: 2px solid #d4af37;
+  display: inline-block;
+}
+.property-category .property-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.property-card {
+  background: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 2rem;
+  text-align: center;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease;
+}
+.property-card:hover {
+  transform: translateY(-5px);
+}
+.property-card h3 {
+  font-family: "Playfair Display", serif;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+.property-card p {
+  font-size: 1rem;
+  color: #444;
+  margin-bottom: 1rem;
+}
+.property-card a {
+  display: inline-block;
+  margin-top: 1rem;
+  color: #d4af37;
+  font-weight: bold;
+}
+.property-card a:hover {
+  text-decoration: underline;
+}
+
+.property-label {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  padding: 0.3rem 0.75rem;
+  border-radius: 20px;
+  margin-bottom: 1rem;
+}
+.property-label.for-sale {
+  background-color: #d4af37;
+  color: #ffffff;
+}
+.property-label.for-rent {
+  background-color: #3498db;
+  color: #ffffff;
+}
+
+.main-footer {
+  background: #0d0d0d;
+  color: #ffffff;
+  padding: 2rem;
+}
+.main-footer .footer-nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-bottom: 1rem;
+}
+.main-footer .footer-nav ul a {
+  color: #ffffff;
+}
+.main-footer .footer-nav ul a:hover {
+  color: #d4af37;
+}
+.main-footer p {
+  text-align: center;
+  font-size: 0.875rem;
+  color: #aaa;
+}
+
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 2.2rem;
+  }
+  .main-menu {
+    flex-direction: column;
+    gap: 1rem;
+  }
+}
+
+/*# sourceMappingURL=main.css.map */
