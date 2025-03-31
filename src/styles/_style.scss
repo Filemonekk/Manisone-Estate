@@ -361,3 +361,32 @@ a {
 	}
   }
   
+
+  .contact-section {
+	max-width: 1000px;
+	margin: 0 auto;
+	padding: 4rem 2rem;
+	text-align: center;
+  
+	h1 {
+	  font-family: $font-title;
+	  font-size: 2.5rem;
+	  margin-bottom: 1rem;
+	  color: $color-dark;
+	}
+  
+	p {
+	  font-size: 1.1rem;
+	  color: #555;
+	  margin-bottom: 2rem;
+	}
+  
+	#map {
+	  height: 400px;
+	  width: 100%;
+	  border-radius: 12px;
+	  border: 1px solid #ccc;
+	  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+	}
+  }
+  

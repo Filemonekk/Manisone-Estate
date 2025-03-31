@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact | Manisoné</title>
+    <link rel="stylesheet" href="/capstone-project-template/dist/styles/main.css" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+</head>
+
+<body>
+    <header class="main-header">
+        <nav class="main-nav">
+            <div class="logo">Manisoné</div>
+            <ul class="main-menu">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="contact-section">
+            <h1>Contact Us</h1>
+            <p>Visit us or reach out anytime. We are here to assist you.</p>
+
+            <div id="map" style="height: 400px; width: 100%; margin-top: 2rem;"></div>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <nav class="footer-nav">
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        <p>&copy; 2025 Manisoné. All rights reserved.</p>
+    </footer>
+
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script>
+        // Initialize map
+        const map = L.map('map').setView([54.3520252, 18.6466384], 13); // Coordinates for Paris
+
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; OpenStreetMap contributors'
+        }).addTo(map);
+
+        L.marker([54.3520252, 18.6466384])
+            .addTo(map)
+            .bindPopup('Manisoné Office - Gdańsk')
+            .openPopup();
+    </script>
+</body>
+
+</html>
