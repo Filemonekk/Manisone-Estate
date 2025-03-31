@@ -1,9 +1,13 @@
 const gallery = document.getElementById('gallery')
 const showMoreBtn = document.getElementById('showMoreBtn')
+const filterSelect = document.getElementById('filterType')
+const sortSelect = document.getElementById('sortSelect')
 
 let propertiesData = []
 let itemsPerPage = 10
 let currentPage = 1
+let activeFilter = ''
+let activeSort = ''
 
 async function loadData() {
 	try {
@@ -18,7 +22,15 @@ async function loadData() {
 function renderProperties() {
 	const start = (currentPage - 1) * itemsPerPage
 	const end = currentPage * itemsPerPage
-	const visibleItems = propertiesData.slice(start, end)
+	let filteredData = activeFilter ? propertiesData.filter(item => item.type === activeFilter) : [...propertiesData]
+
+	if (activeSort === 'price-asc') {
+		filteredData.sort((a, b) => a.price - b.price)
+	} else if (activeSort === 'price-desc') {
+		filteredData.sort((a, b) => b.price - a.price)
+	}
+
+	const visibleItems = filteredData.slice(start, end)
 
 	visibleItems.forEach(item => {
 		const card = document.createElement('div')
@@ -45,4 +57,20 @@ function renderProperties() {
 	}
 }
 
-loadData();
+loadData()
+
+filterSelect.addEventListener('change', () => {
+	activeFilter = filterSelect.value
+	currentPage = 1
+	gallery.innerHTML = ''
+	showMoreBtn.style.display = 'block'
+	renderProperties()
+})
+
+sortSelect.addEventListener('change', () => {
+	activeSort = sortSelect.value
+	currentPage = 1
+	gallery.innerHTML = ''
+	showMoreBtn.style.display = 'block'
+	renderProperties()
+})
