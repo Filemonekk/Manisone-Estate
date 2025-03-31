@@ -2,12 +2,14 @@ const gallery = document.getElementById('gallery')
 const showMoreBtn = document.getElementById('showMoreBtn')
 const filterSelect = document.getElementById('filterType')
 const sortSelect = document.getElementById('sortSelect')
+const searchInput = document.getElementById('searchInput')
 
 let propertiesData = []
 let itemsPerPage = 10
 let currentPage = 1
 let activeFilter = ''
 let activeSort = ''
+let searchQuery = ''
 
 async function loadData() {
 	try {
@@ -22,7 +24,18 @@ async function loadData() {
 function renderProperties() {
 	const start = (currentPage - 1) * itemsPerPage
 	const end = currentPage * itemsPerPage
-	let filteredData = activeFilter ? propertiesData.filter(item => item.type === activeFilter) : [...propertiesData]
+	let filteredData = [...propertiesData]
+
+	if (activeFilter) {
+		filteredData = filteredData.filter(item => item.type === activeFilter)
+	}
+
+	if (searchQuery) {
+		const query = searchQuery.toLowerCase()
+		filteredData = filteredData.filter(
+			item => item.title.toLowerCase().includes(query) || item.location.toLowerCase().includes(query)
+		)
+	}
 
 	if (activeSort === 'price-asc') {
 		filteredData.sort((a, b) => a.price - b.price)
@@ -69,6 +82,14 @@ filterSelect.addEventListener('change', () => {
 
 sortSelect.addEventListener('change', () => {
 	activeSort = sortSelect.value
+	currentPage = 1
+	gallery.innerHTML = ''
+	showMoreBtn.style.display = 'block'
+	renderProperties()
+})
+
+searchInput.addEventListener('input', () => {
+	searchQuery = searchInput.value
 	currentPage = 1
 	gallery.innerHTML = ''
 	showMoreBtn.style.display = 'block'
