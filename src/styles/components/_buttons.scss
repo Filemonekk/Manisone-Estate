@@ -1,0 +1,13 @@
+.btn {
+    padding: 0.75rem 2rem;
+    background: $color-primary;
+    color: $color-light;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background 0.3s;
+  
+    &:hover {
+      background: darken($color-primary, 10%);
+    }
+  }
+  

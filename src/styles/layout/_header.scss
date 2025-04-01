@@ -1,0 +1,63 @@
+.main-header {
+	background: $color-dark;
+	padding: 1rem 2rem;
+
+	.main-nav {
+		@include flex-center;
+		justify-content: space-between;
+		max-width: 1200px;
+		margin: 0 auto;
+
+		.logo {
+			font-family: $font-title;
+			font-size: 1.5rem;
+			color: $color-primary;
+		}
+
+		.main-menu {
+			list-style: none;
+			@include flex-center;
+			gap: 2rem;
+
+			li {
+				position: relative;
+
+				&:hover .submenu {
+					display: block;
+				}
+
+				.submenu {
+					display: none;
+					position: absolute;
+					background: $color-light;
+					border: 1px solid #ccc;
+					top: 100%;
+					left: 0;
+					padding: 0.5rem 0;
+					z-index: 10;
+
+					li {
+						padding: 0.5rem 1rem;
+
+						a {
+							color: $color-dark;
+
+							&:hover {
+								color: $color-primary;
+							}
+						}
+					}
+				}
+			}
+
+			a {
+				color: $color-light;
+				font-weight: bold;
+
+				&:hover {
+					color: $color-primary;
+				}
+			}
+		}
+	}
+}

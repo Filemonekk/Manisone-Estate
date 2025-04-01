@@ -1,0 +1,32 @@
+.carousel-container {
+	position: relative;
+	overflow: hidden;
+	padding: 2rem 0;
+
+	.carousel-track {
+		display: flex;
+		gap: 1.5rem;
+		transition: transform 0.5s ease;
+	}
+
+	.carousel-btn {
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+		background: $color-primary;
+		color: white;
+		border: none;
+		font-size: 2rem;
+		padding: 0.5rem 1rem;
+		cursor: pointer;
+		z-index: 1;
+
+		&.prev {
+			left: 0;
+		}
+
+		&.next {
+			right: 0;
+		}
+	}
+}

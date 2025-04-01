@@ -17,7 +17,13 @@
             <div class="logo">Manisoné</div>
             <ul class="main-menu">
                 <li><a href="index.html">Home</a></li>
-                <li><a href="./src/pages/gallery.html">Gallery</a></li>
+                <li>
+                    <a href="#">Gallery ▾</a>
+                    <ul class="submenu">
+                      <li><a href="./src/pages/gallery.html#sale">For Sale</a></li>
+                      <li><a href="./src/pages/gallery.html#rent">For Rent</a></li>
+                    </ul>
+                  </li>
                 <li><a href="./src/pages/contact.html">Contact</a></li>
             </ul>
         </nav>
@@ -33,8 +39,11 @@
         </section>
         <section class="property-category">
             <h2>For Sale</h2>
-            <div class="property-list">
+            <div class="carousel-conatiner">
+                <button class="carousel-btn prev"></button>
+                <div class="carousel-track"></div>
                 <article class="property-card">
+                    <img src="./src/assets/img/villa-marbella.jpg" alt="Oceanfront Villa" />
                     <span class="property-label for-sale">For Sale</span>
                     <h3>Oceanfront Villa, Marbella</h3>
                     <p>Discover our exclusive beachfront villa with stunning ocean views.</p>
@@ -42,12 +51,28 @@
                 </article>
 
                 <article class="property-card">
+                    <img src="./src/assets/img/chateau-provence.jpg" alt="Oceanfront Villa" />
+                    <span class="property-label for-sale">For Sale</span>
+                    <h3>Château Montclaire, Provence</h3>
+                    <p>Step into timeless elegance in this renovated 18th-century estate surrounded by lavender fields.</p>
+                    <a href="pages/gallery.html">View More</a>
+                </article>
+                <article class="property-card">
+                    <img src="./src/assets/img/chateau-provence.jpg" alt="Oceanfront Villa" />
+                    <span class="property-label for-sale">For Sale</span>
+                    <h3>Château Montclaire, Provence</h3>
+                    <p>Step into timeless elegance in this renovated 18th-century estate surrounded by lavender fields.</p>
+                    <a href="pages/gallery.html">View More</a>
+                </article>
+                <article class="property-card">
+                    <img src="./src/assets/img/chateau-provence.jpg" alt="Oceanfront Villa" />
                     <span class="property-label for-sale">For Sale</span>
                     <h3>Château Montclaire, Provence</h3>
                     <p>Step into timeless elegance in this renovated 18th-century estate surrounded by lavender fields.</p>
                     <a href="pages/gallery.html">View More</a>
                 </article>
             </div>
+            <button class="carousel-btn next"></button>
         </section>
 
         <section class="property-category">

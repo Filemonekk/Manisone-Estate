@@ -1,0 +1,57 @@
+.hero {
+	background: url('../../src/assets/img/heroImg.jpg') center/cover no-repeat;
+	height: 90vh;
+	position: relative;
+	text-align: center;
+	color: $color-light;
+	@include flex-center;
+
+	.hero-overlay {
+		position: absolute;
+		inset: 0;
+		background: rgba(0, 0, 0, 0.5);
+	}
+
+	.hero-content {
+		position: relative;
+		z-index: 1;
+		max-width: 800px;
+		padding: 0 1rem;
+
+		h1 {
+			font-family: $font-title;
+			font-size: 3rem;
+			margin-bottom: 1rem;
+		}
+
+		p {
+			font-size: 1.2rem;
+			margin-bottom: 2rem;
+		}
+
+		.hero-btn {
+			padding: 0.75rem 2rem;
+			background: $color-primary;
+			color: $color-light;
+			border-radius: 5px;
+			font-weight: bold;
+			transition: background 0.3s;
+
+			&:hover {
+				background: darken($color-primary, 10%);
+			}
+		}
+	}
+}
+
+
+@include respond(tablet) {
+	.hero h1 {
+		font-size: 2.2rem;
+	}
+
+	.main-menu {
+		flex-direction: column;
+		gap: 1rem;
+	}
+}

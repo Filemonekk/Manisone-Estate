@@ -1,0 +1,29 @@
+.main-footer {
+	background: $color-dark;
+	color: $color-light;
+	padding: 2rem;
+
+	.footer-nav {
+		ul {
+			list-style: none;
+			display: flex;
+			justify-content: center;
+			gap: 2rem;
+			margin-bottom: 1rem;
+
+			a {
+				color: $color-light;
+
+				&:hover {
+					color: $color-primary;
+				}
+			}
+		}
+	}
+
+	p {
+		text-align: center;
+		font-size: 0.875rem;
+		color: #aaa;
+	}
+}

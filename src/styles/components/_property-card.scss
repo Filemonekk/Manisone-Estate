@@ -1,0 +1,87 @@
+.property-category {
+	padding: 4rem 2rem;
+	max-width: 1200px;
+	margin: 0 auto;
+
+	h2 {
+		font-family: $font-title;
+		font-size: 2rem;
+		margin-bottom: 2rem;
+		color: $color-dark;
+		border-bottom: 2px solid $color-primary;
+		display: inline-block;
+	}
+
+	.property-list {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+		gap: 2rem;
+	}
+}
+
+.property-card {
+	background: $color-light;
+	border: 1px solid #ddd;
+	border-radius: 10px;
+	padding: 2rem;
+	text-align: center;
+	box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
+	transition: transform 0.3s ease;
+	min-width: 300px;
+	max-width: 300px;
+
+	&:hover {
+		transform: translateY(-5px);
+	}
+
+	img {
+		width: 100%;
+		height: 200px;
+		object-fit: cover;
+		border-radius: 10px;
+		margin-bottom: 1rem;
+	  }
+
+	h3 {
+		font-family: $font-title;
+		font-size: 1.5rem;
+		margin-bottom: 1rem;
+	}
+
+	p {
+		font-size: 1rem;
+		color: #444;
+		margin-bottom: 1rem;
+	}
+
+	a {
+		display: inline-block;
+		margin-top: 1rem;
+		color: $color-primary;
+		font-weight: bold;
+
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+}
+
+.property-label {
+	display: inline-block;
+	font-size: 0.75rem;
+	font-weight: 600;
+	text-transform: uppercase;
+	padding: 0.3rem 0.75rem;
+	border-radius: 20px;
+	margin-bottom: 1rem;
+
+	&.for-sale {
+		background-color: $color-primary;
+		color: $color-light;
+	}
+
+	&.for-rent {
+		background-color: #3498db;
+		color: $color-light;
+	}
+}

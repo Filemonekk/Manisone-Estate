@@ -1,2 +1,17 @@
-@import 'settings';
-@import 'style';
+@import 'variables';
+@import 'mixins';
+
+@import 'base/base';
+
+@import 'layout/header';
+@import 'layout/footer';
+@import 'layout/hero';
+
+@import 'components/buttons';
+@import 'components/property-card';
+@import 'components/carousel';
+@import 'components/gallery';
+
+@import 'pages/index';
+@import 'pages/contact';
+@import 'pages/gallery-page';
