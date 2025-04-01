@@ -71,7 +71,7 @@ a {
 }
 
 .hero {
-  background: url("../../assets/img/hero.jpg") center/cover no-repeat;
+  background: url("../../src/assets/img/heroImg.jpg") center/cover no-repeat;
   height: 90vh;
   position: relative;
   text-align: center;

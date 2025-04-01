@@ -1,7 +1,7 @@
 # 🏡 Manisoné – Real Estate Website
 
 Hi there! 👋  
-This is my personal project for a premium real estate website called **Manisoné**. I built it using only **HTML**, **SCSS (CSS)**, and **JavaScript**, without any frameworks like React or Bootstrap — because I wanted to really understand how things work under the hood.
+This is my personal project for a premium real estate website called **Manisoné**. I built it using only **HTML**, **SCSS (CSS)**, and **JavaScript**.
 
 ---
 
