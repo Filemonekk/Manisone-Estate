@@ -1,3 +1,6 @@
+@use '../variables' as *;
+@use '../mixins' as *;
+@use 'sass:color';
 .hero {
 	background: url('../../src/assets/img/heroImg.jpg') center/cover no-repeat;
 	height: 90vh;
@@ -38,7 +41,8 @@
 			transition: background 0.3s;
 
 			&:hover {
-				background: darken($color-primary, 10%);
+				background: color.adjust($color-primary, $lightness: -10%);
+
 			}
 		}
 	}

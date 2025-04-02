@@ -1,17 +1,17 @@
-@import 'variables';
-@import 'mixins';
+@use 'variables' as *;
+@use 'mixins' as *;
 
-@import 'base/base';
+@use 'base/base';
 
-@import 'layout/header';
-@import 'layout/footer';
-@import 'layout/hero';
+@use 'layout/header';
+@use 'layout/footer';
+@use 'layout/hero';
 
-@import 'components/buttons';
-@import 'components/property-card';
-@import 'components/carousel';
-@import 'components/gallery';
+@use 'components/buttons';
+@use 'components/property-card';
+@use 'components/carousel';
+@use 'components/gallery';
 
-@import 'pages/index';
-@import 'pages/contact';
-@import 'pages/gallery-page';
+@use 'pages/index';
+@use 'pages/contact';
+@use 'pages/gallery-page';

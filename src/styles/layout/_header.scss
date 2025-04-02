@@ -1,3 +1,5 @@
+@use '../variables' as *;
+@use '../mixins' as *;
 .main-header {
 	background: $color-dark;
 	padding: 1rem 2rem;

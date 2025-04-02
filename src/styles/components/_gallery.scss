@@ -1,3 +1,6 @@
+@use '../variables' as *;
+@use 'sass:color';
+
 .gallery-controls {
 	display: flex;
 	flex-wrap: wrap;
@@ -44,7 +47,7 @@
 		cursor: pointer;
 
 		&:hover {
-			background: darken($color-primary, 10%);
+			background: color.adjust($color-primary, $lightness: -10%);
 		}
 	}
 }
