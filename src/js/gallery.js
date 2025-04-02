@@ -95,3 +95,8 @@ searchInput.addEventListener('input', () => {
 	showMoreBtn.style.display = 'block'
 	renderProperties()
 })
+
+showMoreBtn.addEventListener('click', () => {
+	currentPage++
+	renderProperties()
+})

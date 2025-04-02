@@ -15,6 +15,8 @@ This is my personal project for a premium real estate website called **Manisoné
 - ➕ A “Show More” button to load more listings without reloading the page
 - 🗺 A contact page with a map showing the office location (OpenStreetMap – Gdańsk, Poland)
 - 📱 Fully responsive layout using Flexbox and CSS Grid
+- 🎯 SCSS with variables, mixins, modular structure
+- ✅ ESLint used to keep JS clean and consistent
 
 ---
 

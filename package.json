@@ -5,12 +5,16 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "compile": "sass src/styles:dist/styles"
+    "compile": "sass src/styles:dist/styles",
+     "lint": "eslint src/js"
   },
   "keywords": [],
   "author": "Kasia",
   "license": "ISC",
   "devDependencies": {
+    "@eslint/js": "^9.23.0",
+    "eslint": "^9.23.0",
+    "globals": "^16.0.0",
     "sass": "^1.86.0"
   }
 }
