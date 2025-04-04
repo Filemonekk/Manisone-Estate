@@ -31,3 +31,80 @@
 		}
 	}
 }
+
+.property-card {
+	min-width: 300px;
+	max-width: 300px;
+	flex-shrink: 0;
+	background: #fff;
+	border: 1px solid #eee;
+	border-radius: 10px;
+	overflow: hidden;
+	box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
+	text-align: center;
+	transition: transform 0.3s ease;
+
+	img {
+		width: 100%;
+		height: 200px;
+		object-fit: cover;
+		border-bottom: 1px solid #ddd;
+	}
+
+	&:hover {
+		transform: translateY(-5px);
+	}
+
+	.property-info {
+		padding: 1rem;
+
+		h3 {
+			font-family: $font-title;
+			font-size: 1.2rem;
+			margin-bottom: 0.5rem;
+		}
+
+		p {
+			font-size: 0.95rem;
+			margin: 0.25rem 0;
+			color: #666;
+		}
+
+		.price {
+			font-weight: bold;
+			color: $color-primary;
+		}
+	}
+
+	.property-label {
+		display: inline-block;
+		margin-top: 0.5rem;
+		font-size: 0.75rem;
+		font-weight: 600;
+		text-transform: uppercase;
+		padding: 0.3rem 0.8rem;
+		border-radius: 20px;
+
+		&.for-sale {
+			background-color: $color-primary;
+			color: #fff;
+		}
+
+		&.for-rent {
+			background-color: #3498db;
+			color: #fff;
+		}
+	}
+}
+
+@include respond(phone) {
+	.carousel-btn {
+		font-size: 1.5rem;
+		padding: 0.3rem 0.6rem;
+	}
+
+	.property-card {
+		min-width: 90vw;
+		max-width: 90vw;
+	}
+}

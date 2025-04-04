@@ -5,7 +5,7 @@ const sortSelect = document.getElementById('sortSelect')
 const searchInput = document.getElementById('searchInput')
 
 let propertiesData = []
-let itemsPerPage = 10
+let itemsPerPage = 9
 let currentPage = 1
 let activeFilter = ''
 let activeSort = ''
