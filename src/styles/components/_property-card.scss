@@ -21,7 +21,7 @@
 }
 
 .property-card {
-	background:$color-light;
+	background: $color-light;
 	border: 1px solid #ddd;
 	border-radius: 10px;
 	padding: 2rem;
@@ -41,10 +41,10 @@
 		object-fit: cover;
 		border-radius: 10px;
 		margin-bottom: 1rem;
-	  }
+	}
 
 	h3 {
-		font-family:$font-title;
+		font-family: $font-title;
 		font-size: 1.5rem;
 		margin-bottom: 1rem;
 	}
@@ -58,7 +58,7 @@
 	a {
 		display: inline-block;
 		margin-top: 1rem;
-		color:$color-primary;
+		color: $color-primary;
 		font-weight: bold;
 
 		&:hover {
@@ -77,8 +77,8 @@
 	margin-bottom: 1rem;
 
 	&.for-sale {
-		background-color:$color-primary;
-		color:$color-light;
+		background-color: $color-primary;
+		color: $color-light;
 	}
 
 	&.for-rent {

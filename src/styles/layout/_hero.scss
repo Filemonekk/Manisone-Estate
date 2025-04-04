@@ -42,12 +42,10 @@
 
 			&:hover {
 				background: color.adjust($color-primary, $lightness: -10%);
-
 			}
 		}
 	}
 }
-
 
 @include respond(tablet) {
 	.hero h1 {

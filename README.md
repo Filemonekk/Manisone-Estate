@@ -20,28 +20,31 @@ This is my personal project for a premium real estate website called **Manisoné
 
 ---
 
-
 ---
 
 ## 🔧 How to run this project
 
 1. Clone the repo:
+
 ```bash
 git clone <your-repo-url>
 cd manisone
 ```
 
 2. Install dependencies:
+
 ```bash
 npm install
 ```
 
 3. Compile SCSS:
+
 ```bash
 npm run compile
 ```
 
 4. Run local server:
+
 ```bash
 npx serve src
 ```
