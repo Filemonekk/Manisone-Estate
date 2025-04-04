@@ -6,7 +6,7 @@ This is my personal project for a premium real estate website called **Manisoné
 ---
 
 ## Demo
-You can see the ebsite here: [ Manisoné – Real Estate Website](https://filemonekk.github.io/Manisone-Estate/)
+You can see the website here: [ Manisoné – Real Estate Website](https://filemonekk.github.io/Manisone-Estate/)
 
 ---
 
