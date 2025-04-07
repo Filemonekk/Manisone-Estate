@@ -1,4 +1,6 @@
 @use '../variables' as *;
+@use '../mixins' as *;
+
 .carousel-container {
 	position: relative;
 	overflow: hidden;
