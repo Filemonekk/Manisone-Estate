@@ -51,7 +51,7 @@ npm run compile
 4. Run local server:
 
 ```bash
-npx serve src
+npx serve .
 ```
 
 5. Open your browser at the local address.
